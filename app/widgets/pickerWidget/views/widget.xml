@@ -1,0 +1,15 @@
+<Alloy>
+	<View id="parentView">
+		<View id="pickerView">
+			<Toolbar id= "picToolbar" platform="ios" borderTop="true" borderBottom="false">
+	            <Items>
+	                <Button id="doneBtn" title="Done" class="btnClass"/>
+	                <FlexSpace/>
+	             	<FlexSpace/>
+	                <Button id="cancelBtn" title="Cancel" class="btnClass"/>
+	            </Items>
+       		</Toolbar>
+			<Picker id="picker" selectionIndicator="true" useSpinner="true" platform="ios"></Picker>
+		</View>
+	</View>
+</Alloy>

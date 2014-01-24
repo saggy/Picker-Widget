@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="index">
+		<Button id="btn" onClick="openPicker"/>
+		<Label id="lbl"/>
+	</Window>
+</Alloy>

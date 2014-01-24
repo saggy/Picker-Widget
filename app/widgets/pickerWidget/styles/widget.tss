@@ -1,0 +1,24 @@
+"#parentView": {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundImage: "/images/transparent.png"
+},
+"#pickerView": {
+	width : 320,
+	height : 251,
+	backgroundColor : '#14400f'
+},
+"#picker":{
+	top : 48,
+	width :Ti.UI.FILL,
+	height : Ti.UI.FILL,
+},
+"#picToolbar":{
+	top : 0,
+	tintColor : '#FFF',
+	barColor : '#14400f',
+},
+".btnClass":{
+	color : '#fffff',
+	style : Ti.UI.iPhone.SystemButtonStyle.BORDERED
+}

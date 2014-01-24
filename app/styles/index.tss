@@ -1,0 +1,18 @@
+"#index": {
+	backgroundColor:"white"
+},
+"#btn[platform=ios]":{
+	width : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	title : " Click Here To Show Picker",
+},
+"#lbl" : {
+	top : "15%",
+	color: "black",
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
+	font:{
+		fontSize : 25,
+		fontWeight: "bold"
+	}
+}
