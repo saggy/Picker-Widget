@@ -4,7 +4,7 @@ function openPicker(e) {
 	for (var i = 0; i < 10; i++) {
 		data.push({
 			picValue : i.toString(),
-			fontSize : 30
+			fontSize : 40
 		});
 	}
 	var wid = Alloy.createWidget("pickerWidget");

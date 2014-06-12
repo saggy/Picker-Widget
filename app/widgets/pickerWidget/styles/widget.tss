@@ -4,21 +4,36 @@
 	backgroundImage: "/images/transparent.png"
 },
 "#pickerView": {
-	width : 320,
-	height : 251,
-	backgroundColor : '#14400f'
+	width: 320,
+	height: 251,
+	backgroundColor: '#14400f'
 },
-"#picker":{
-	top : 48,
-	width :Ti.UI.FILL,
-	height : Ti.UI.FILL,
+"#picker[platform=android]":{
+	top: 48,
+	//bottom: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+},
+"#picker[platform=ios]":{
+	top: 48,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
 },
 "#picToolbar":{
-	top : 0,
-	tintColor : '#FFF',
-	barColor : '#14400f',
+	top: 0,
+	tintColor: '#FFF',
+	barColor: '#14400f'
 },
 ".btnClass":{
-	color : '#fffff',
-	style : Ti.UI.iPhone.SystemButtonStyle.BORDERED
+	color: '#FFF',
+	style: Ti.UI.iPhone.SystemButtonStyle.BORDERED
+}
+".androidBtnClass":{
+	top: 0,
+	height: 48,
+	color: '#FFF',
+	borderWidth: 1,
+	borderRadius: 5,
+	width: Ti.UI.SIZE,
+	borderColor: "white"
 }

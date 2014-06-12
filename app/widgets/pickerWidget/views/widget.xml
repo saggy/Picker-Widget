@@ -1,15 +1,20 @@
 <Alloy>
 	<View id="parentView">
-		<View id="pickerView">
+		<View id="pickerView" platform = "ios">
 			<Toolbar id= "picToolbar" platform="ios" borderTop="true" borderBottom="false">
-	            <Items>
-	                <Button id="doneBtn" title="Done" class="btnClass"/>
-	                <FlexSpace/>
-	             	<FlexSpace/>
-	                <Button id="cancelBtn" title="Cancel" class="btnClass"/>
-	            </Items>
-       		</Toolbar>
-			<Picker id="picker" selectionIndicator="true" useSpinner="true" platform="ios"></Picker>
+				<Items>
+					<Button id="doneBtn" title="Done" class="btnClass"/>
+					<FlexSpace/>
+					<FlexSpace/>
+					<Button id="cancelBtn" title="Cancel" class="btnClass"/>
+				</Items>
+			</Toolbar>
+			<Picker id="picker" selectionIndicator="true" useSpinner="true" platform="ios"/>
+		</View>
+		<View id="pickerView" platform = "android">
+			<Button id="doneBtn"  platform = "android"  left = "0" title="Done" class="androidBtnClass"/>
+			<Button id="cancelBtn"  platform = "android"  right = "0" title="Cancel" class="androidBtnClass"/>
+			<Picker id="picker" selectionIndicator="true" useSpinner="true" platform="android"/>
 		</View>
 	</View>
 </Alloy>

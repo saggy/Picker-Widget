@@ -4,12 +4,13 @@ $.done, $.cancel;
 
 $.init = function(params) {
 	Ti.API.info('value-->' + JSON.stringify(params.value));
-	
+
 	if (params.value.length) {
 		Object.keys(params.value).forEach(function(pValue) {
 			dataReview.push(Ti.UI.createPickerRow({
 				title : params.value[pValue].picValue,
-				fontSize :params.value[pValue].fontSize
+				fontSize : params.value[pValue].fontSize,
+				height : 40,
 			}));
 		});
 	}
@@ -20,22 +21,37 @@ $.init = function(params) {
 	$.cancel = params.cancelCallback;
 };
 
-// on changeEvent of picker
-$.picker.addEventListener('change', function(e) {
-	Ti.API.info('title-->' + e.row.title);
-	rowData = e;
-});
+if (platform() == "ios") {
+	// on changeEvent of picker
+	$.picker.addEventListener('change', function(e) {
+		Ti.API.info('title-->' + e.row.title);
+		rowData = e;
+	});
+	// cancel button
+	$.cancelBtn.addEventListener("click", function(e) {
+		closeAndSavePicker($.parentView);
+	});
+	//done button
+	$.doneBtn.addEventListener("click", function(e) {
+		closeAndSavePicker($.parentView);
+		$.done(rowData);
+	});
+} else {
+	// cancel button
+	$.cancelBtn.addEventListener("click", function(e) {
+		closeAndSavePicker($.parentView);
+	});
+	//done button
+	$.doneBtn.addEventListener("click", function(e) {
+		closeAndSavePicker($.parentView);
+		$.done(rowData);
+	});
 
-// cancel button
-$.cancelBtn.addEventListener("click", function(e) {
-	closeAndSavePicker($.parentView);
-});
-
-//done button
-$.doneBtn.addEventListener("click", function(e) {
-	closeAndSavePicker($.parentView);
-	$.done(rowData);
-});
+	$.picker.addEventListener('change', function(e) {
+		Ti.API.info('title-->' + e.row.title);
+		rowData = e;
+	});
+}
 
 //To remove picker from its parent container
 function closeAndSavePicker(viewObject) {
@@ -47,4 +63,8 @@ function closeAndSavePicker(viewObject) {
 	}
 	var parent = viewObject.getParent();
 	parent.remove(viewObject);
+};
+
+function platform() {
+	return Ti.Platform.osname;
 };

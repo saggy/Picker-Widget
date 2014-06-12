@@ -1,18 +1,19 @@
 "#index": {
-	backgroundColor:"white"
+	backgroundColor: "white"
 },
-"#btn[platform=ios]":{
-	width : Ti.UI.SIZE,
-	height : Ti.UI.SIZE,
-	title : " Click Here To Show Picker",
+"#btn":{
+	color: "#FFF",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	title: " Click Here To Show Picker"
 },
-"#lbl" : {
-	top : "15%",
+"#lbl": {
+	top: "15%",
 	color: "black",
-	width:Ti.UI.SIZE,
-	height:Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
 	font:{
-		fontSize : 25,
+		fontSize: 25,
 		fontWeight: "bold"
 	}
 }
