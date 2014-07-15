@@ -5,8 +5,7 @@
 },
 "#pickerView": {
 	width: 320,
-	height: 251,
-	backgroundColor: '#14400f'
+	height: 251
 },
 "#picker[platform=android]":{
 	top: 48,
@@ -21,8 +20,7 @@
 },
 "#picToolbar":{
 	top: 0,
-	tintColor: '#FFF',
-	barColor: '#14400f'
+	tintColor: '#FFF'
 },
 ".btnClass":{
 	color: '#FFF',

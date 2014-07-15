@@ -5,17 +5,30 @@ $.done, $.cancel;
 $.init = function(params) {
 	Ti.API.info('value-->' + JSON.stringify(params.value));
 
+	if (params.toolBarBackgroundColor) {
+		$.picToolbar.barColor = params.toolBarBackgroundColor;
+		$.pickerView.backgroundColor = params.toolBarBackgroundColor;
+	} else {
+		$.picToolbar.barColor = '#14400f';
+		$.pickerView.backgroundColor = '#14400f';
+	}
+
 	if (params.value.length) {
 		Object.keys(params.value).forEach(function(pValue) {
 			dataReview.push(Ti.UI.createPickerRow({
+				height : 30,
 				title : params.value[pValue].picValue,
 				fontSize : params.value[pValue].fontSize,
-				height : 40,
 			}));
 		});
 	}
 	if (dataReview.length) {
 		$.picker.add(dataReview);
+	}
+	if (params.index && params.index != undefined && params.index != null && params.index != "") {
+		$.picker.setSelectedRow(0, params.index, false);
+	} else {
+		$.picker.setSelectedRow(0, 0, false);
 	}
 	$.done = params.doneCallback;
 	$.cancel = params.cancelCallback;

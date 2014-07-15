@@ -2,7 +2,7 @@
 	backgroundColor: "white"
 },
 "#btn":{
-	color: "#FFF",
+	color: "#000",
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	title: " Click Here To Show Picker"
